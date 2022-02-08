@@ -14,53 +14,53 @@ class Calc {
 
     //Adds two numbers together, defaults the second value to the memory property
     add(value1, value2 = this.memory) {
-        if(value2!==undefined) {
-        this.memory = value1 + value2;
-        console.log(`${value1} + ${value2} = ${this.memory}`);
-        return this.memory;
+        if (value2 !== undefined) {
+            this.memory = value1 + value2;
+            console.log(`${value1} + ${value2} = ${this.memory}`);
+            return this.memory;
         } else {
-             console.log(new Error('Must input two values to add'));
-             return this.memory;
+            console.log(new Error('Must input two values to add'));
+            return this.memory;
         }
     }
 
     //Subtracts one number from another number, defaults the second value to the memory property
     subtract(value1, value2 = this.memory) {
-        if(value2!==undefined) {
+        if (value2 !== undefined) {
             this.memory = value2 - value1;
             console.log(`${value2} - ${value1} = ${this.memory}`);
             return this.memory;
-            } else {
-                 console.log(new Error('Must input two values to subtract'));
-            }
+        } else {
+            console.log(new Error('Must input two values to subtract'));
+        }
     }
 
     //Multiplies two numbers together, defaults the second value to the memory property
     multiply(value1, value2 = this.memory) {
-        if(value2!==undefined) {
+        if (value2 !== undefined) {
             this.memory = value1 * value2;
             console.log(`${value1} x ${value2} = ${this.memory}`);
             return this.memory;
-            } else {
-                 console.log(new Error('Must input two values to multiply'));
-            }
+        } else {
+            console.log(new Error('Must input two values to multiply'));
+        }
     }
 
     //Divides one number by another, defaults second value to the memory property
     divide(value1, value2 = this.memory) {
-        if(value2!==undefined) {
+        if (value2 !== undefined) {
             this.memory = value1 / value2;
             console.log(`${value1} / ${value2} = ${this.memory}`);
             return this.memory;
-            } else {
-                 console.log(new Error('Must input two values to divide'));
-            }
+        } else {
+            console.log(new Error('Must input two values to divide'));
+        }
     }
 
     //Converts temperature from Celcius to Farenheit
     convertToF(cTemp) {
-        if(typeof cTemp === 'number'){
-        return cTemp * 1.8 + 32;
+        if (typeof cTemp === 'number') {
+            return cTemp * 1.8 + 32;
         } else {
             console.log(new Error('Invalid input: input must be a number'))
         }
@@ -68,8 +68,8 @@ class Calc {
 
     //Converts temperature from Farenheit to Celcius
     convertToC(fTemp) {
-        if(typeof fTemp === 'number'){
-            return (fTemp - 32)/1.8;
+        if (typeof fTemp === 'number') {
+            return (fTemp - 32) / 1.8;
         } else {
             console.log(new Error('Invalid input: input must be a number'))
         }
@@ -77,7 +77,7 @@ class Calc {
 
     //Returns the square root of a number, defaults input to the memory property
     sqrt(num = this.memory) {
-        if(num!== undefined) {
+        if (num !== undefined) {
             this.memory = Math.sqrt(num);
             return this.memory;
         } else {
